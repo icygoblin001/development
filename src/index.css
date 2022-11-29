@@ -3,6 +3,10 @@
   /* background-color: aliceblue; */
 }
 
+body {
+  padding: 20px 20px;
+}
+
 .center {
   text-align: center;
 }
@@ -29,25 +33,12 @@ img.small {
 button {
   padding: 0.3rem;
   border: 0.1rem black solid;
-  background-color: lightgoldenrodyellow;
+  background-color: pink;
   width: 100%;
   cursor: pointer;
 }
 
-button.badge {
-  background-color: red;
-  border: none;
-  color: white;
-  width: 1.5rem;
-}
-
-button.add {
-  background-color: aqua;
-  width: 1.5rem;
-}
-
-button.remove {
-  background-color: pink;
+button.update {
   width: 1.5rem;
 }
 

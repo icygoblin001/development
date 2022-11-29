@@ -13,10 +13,10 @@ export default function Favorites(props) {
           <div key={item.id} className="row">
             <div className="col-1">{item.name}</div>
             <div className="col-1">
-              <button onClick={() => onRemove(item)} className="remove">
+              <button onClick={() => onRemove(item)} className="update">
                 -
               </button>
-              <button onClick={() => onAdd(item)} className="add">
+              <button onClick={() => onAdd(item)} className="update">
                 +
               </button>
             </div>

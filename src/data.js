@@ -70,6 +70,56 @@ const data = {
       image:
         "https://i.pinimg.com/236x/23/3a/49/233a496baec4bea128db7e55264a5c5a.jpg",
     },
+    {
+      id: "8",
+      name: "From: 'The History of Love'",
+      author: "Nicole Krauss",
+      link: "https://www.goodreads.com/quotes/345512-once-upon-a-time-there-was-a-boy-he-lived",
+      genre: "book",
+      words: 150,
+      image:
+        "https://i.pinimg.com/236x/23/3a/49/233a496baec4bea128db7e55264a5c5a.jpg",
+    },
+    {
+      id: "9",
+      name: "From: 'The History of Love'",
+      author: "Nicole Krauss",
+      link: "https://www.goodreads.com/quotes/3420-even-now-all-possible-feelings-do-not-yet-exist-there",
+      genre: "book",
+      words: 79,
+      image:
+        "https://i.pinimg.com/236x/23/3a/49/233a496baec4bea128db7e55264a5c5a.jpg",
+    },
+    {
+      id: "10",
+      name: "From: 'The Five People You Meet in Heaven'",
+      author: "Mitch Albom",
+      link: "https://www.goodreads.com/quotes/141062-it-is-because-the-human-spirit-knows-deep-down-that",
+      genre: "book",
+      words: 37,
+      image:
+        "https://i.pinimg.com/236x/23/3a/49/233a496baec4bea128db7e55264a5c5a.jpg",
+    },
+    {
+      id: "11",
+      name: "The End of the Pier",
+      author: "Nicole Callihan",
+      link: "https://poets.org/poem/end-pier",
+      genre: "poem",
+      words: 120,
+      image:
+        "https://i.pinimg.com/236x/23/3a/49/233a496baec4bea128db7e55264a5c5a.jpg",
+    },
+    {
+      id: "12",
+      name: "From: 'Circe'",
+      author: "Madeline Miller",
+      link: "https://www.goodreads.com/quotes/9071601-he-showed-me-his-scars-and-in-return-he-let",
+      genre: "book",
+      words: 16,
+      image:
+        "https://i.pinimg.com/236x/23/3a/49/233a496baec4bea128db7e55264a5c5a.jpg",
+    },
   ],
 };
 

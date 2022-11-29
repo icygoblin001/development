@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Header from "./components/Header";
 import Main from "./components/Main";
 import Favorites from "./components/Favorites";
 import data from "./data";
@@ -44,20 +43,29 @@ function App() {
   };
   return (
     <div>
-      <Header countFavoriteItems={favoriteItems.length} />
+      <div>
+        <h1 class="center">Poem Reader</h1>
+        <h3 class="center">
+          Browse through this curated selection of literary works and keep track
+          of how many words you've read.
+          <br></br>
+          Filter by author and genre, and sort by number of words.
+        </h3>
+      </div>
+
       <div className="row">
         {/* we pass into Main component, becasue we need to interact
         with the poem component used within it */}
+        <Favorites
+          favoriteItems={favoriteItems}
+          onAdd={onAdd}
+          onRemove={onRemove}
+        />
         <Main
           favoriteItems={favoriteItems}
           onAdd={onAdd}
           onRemove={onRemove}
           poems={poems}
-        />
-        <Favorites
-          favoriteItems={favoriteItems}
-          onAdd={onAdd}
-          onRemove={onRemove}
         />
       </div>
     </div>

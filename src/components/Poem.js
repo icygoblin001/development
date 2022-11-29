@@ -11,15 +11,15 @@ export default function Poem(props) {
       <div>by {poem.author}</div>
       <div>Genre: {poem.genre}</div>
       <div>{poem.words} Words</div>
-      <div>
+      <div class="center">
         {/* show minus or plus */}
         {item ? (
           <div>
-            <button onClick={() => onRemove(item)} className="remove">
+            <button onClick={() => onRemove(item)} className="update">
               -
             </button>
             <span className="p-1">{item.qty}</span>
-            <button onClick={() => onAdd(item)} className="add">
+            <button onClick={() => onAdd(item)} className="update">
               +
             </button>
           </div>
