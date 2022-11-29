@@ -1,5 +1,3 @@
-import FavoriteIcon from "@mui/icons-material/Favorite";
-
 export default function Favorites(props) {
   const { favoriteItems, setPoemFilter, setBookFilter, setShortFilter } = props;
   const itemsWords = favoriteItems.reduce((a, c) => a + c.qty * c.words, 0);
