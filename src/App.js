@@ -44,7 +44,7 @@ function App() {
   return (
     <div>
       <div>
-        <h1 class="center">Poem Reader</h1>
+        <h1 class="center">Poems and Excerpts</h1>
         <h3 class="center">
           Browse through this curated selection of literary works and keep track
           of how many words you've read.
