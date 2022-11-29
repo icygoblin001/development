@@ -5,6 +5,9 @@ import data from "./data";
 
 function App() {
   const [favoriteItems, setFavoriteItems] = useState([]);
+  const [poemFilter, setPoemFilter] = useState(false);
+  const [bookFilter, setBookFilter] = useState(false);
+  const [shortFilter, setShortFilter] = useState(false);
   const { poems } = data;
 
   // add poem to favorite items
@@ -43,29 +46,92 @@ function App() {
   };
   return (
     <div>
-      <div>
-        <h1 class="center">Poems and Excerpts</h1>
-        <h3 class="center">
-          Browse through this curated selection of literary works and keep track
-          of how many words you've read.
-          <br></br>
-          Filter by author and genre, and sort by number of words.
-        </h3>
+      <div class="row">
+        <div class="block col-2">
+          <h1>
+            <u>Poems and Excerpts</u>
+          </h1>
+          <h3>
+            Browse through this curated selection of literary works and keep
+            track of how many words you've read.
+            <br />
+            <br />
+            Click on the heart to favorite.
+            <br />
+            <br />
+            Filter by author and genre, and sort by number of words.
+            <br />
+            <br />
+            Click on poem title to view the literary work!
+          </h3>
+        </div>
+        <div class="block col-1">
+          <img
+            class="mainImg"
+            src="https://i.pinimg.com/originals/d0/48/68/d04868235adb286fe2b190a0b436f8f0.jpg"
+          ></img>
+        </div>
       </div>
 
-      <div className="row">
+      <div class="row">
+        <div class="block col-2">
+          <h3>Filter:</h3>
+          <button
+            style={{
+              background: poemFilter ? "green" : "aliceblue",
+            }}
+            onClick={() => {
+              setPoemFilter(!poemFilter);
+            }}
+          >
+            Poem
+          </button>
+          <button
+            style={{
+              background: bookFilter ? "green" : "aliceblue",
+            }}
+            onClick={() => {
+              setBookFilter(!bookFilter);
+            }}
+          >
+            Books
+          </button>
+          <button
+            style={{
+              background: shortFilter ? "green" : "aliceblue",
+            }}
+            onClick={() => {
+              setShortFilter(!shortFilter);
+            }}
+          >
+            Short
+          </button>
+        </div>
+        <div class="block col-2">
+          <h3>Sort:</h3>
+          <button>Number of Words</button>
+        </div>
+      </div>
+
+      <div class="row">
         {/* we pass into Main component, becasue we need to interact
         with the poem component used within it */}
         <Favorites
           favoriteItems={favoriteItems}
           onAdd={onAdd}
           onRemove={onRemove}
+          setPoemFilter={setPoemFilter}
+          setBookFilter={setBookFilter}
+          setShortFilter={setShortFilter}
         />
         <Main
           favoriteItems={favoriteItems}
           onAdd={onAdd}
           onRemove={onRemove}
           poems={poems}
+          filterPoems={poemFilter}
+          filterBooks={bookFilter}
+          filterShort={shortFilter}
         />
       </div>
     </div>

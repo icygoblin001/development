@@ -1,14 +1,38 @@
+#root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 * {
   box-sizing: border-box;
-  /* background-color: aliceblue; */
+  background-color: aliceblue;
+}
+
+h1,
+h2,
+h3 {
+  padding: 20px 0px 0px 0px;
+}
+
+.mainImg {
+  width: 80%;
+  padding: 40px 0px 0px 0px;
 }
 
 body {
   padding: 20px 20px;
+  /* background-color: aliceblue; */
 }
 
 .center {
   text-align: center;
+}
+
+.fav {
+  margin: 10px;
+}
+
+.noborder {
+  border: none;
 }
 
 body {
@@ -25,16 +49,16 @@ a {
   text-decoration: none;
 }
 
-img.small {
-  max-height: 8rem;
-  width: 100%;
+.poemImage {
+  max-height: 10rem;
+  width: 80%;
 }
 
 button {
   padding: 0.3rem;
   border: 0.1rem black solid;
-  background-color: pink;
-  width: 100%;
+  /* background-color: rgb(238, 238, 238); */
+  width: 20%;
   cursor: pointer;
 }
 
@@ -47,8 +71,7 @@ button.update {
 }
 
 .card {
-  background-color: white;
-  border: 3px solid #9966cc;
+  border: 3px solid black;
   width: 30%;
   padding: 1rem;
   margin: 0.5rem;
@@ -68,19 +91,13 @@ button.update {
   justify-content: space-between;
 }
 
-.row.center {
-  align-items: center;
-}
-
 /* smaller screens are stacked */
 .col-1 {
   flex-basis: 100%;
-  border-radius: 10px;
 }
 
 .col-2 {
   flex-basis: 100%;
-  border-radius: 10px;
 }
 
 /* larger screens, put items next to each other, with col 2 taking up more space */
@@ -94,9 +111,7 @@ button.update {
 }
 
 .block {
-  /* background-color: grey; */
   padding: 1rem;
-  margin: 0.5rem;
   border-radius: 10px;
 }
 
