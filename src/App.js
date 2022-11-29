@@ -56,9 +56,6 @@ function App() {
             track of how many words you've read.
             <br />
             <br />
-            Click on the heart to favorite.
-            <br />
-            <br />
             Filter by author and genre, and sort by number of words.
             <br />
             <br />

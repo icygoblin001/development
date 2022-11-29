@@ -1,5 +1,4 @@
 import React from "react";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 export default function Poem(props) {
   const { item, poem, onAdd, onRemove } = props;
   return (
@@ -18,8 +17,7 @@ export default function Poem(props) {
           </div>
         ) : (
           <button onClick={() => onAdd(poem)} class="noborder">
-            {" "}
-            <FavoriteIcon style={{ color: "red" }} />
+            Favorite
           </button>
         )}
       </div>

@@ -23,11 +23,7 @@ export default function Favorites(props) {
       </h2>
       <div>
         {favoriteItems.length === 0 && (
-          <div class="center">
-            Add a poem to your favorites list!
-            <br /> <br />
-            <FavoriteIcon style={{ color: "red" }} />
-          </div>
+          <div class="center">Add a poem to your favorites list!</div>
         )}
         {/* map each item to a div, render a row for each item */}
         {favoriteItems.map((item) => (
