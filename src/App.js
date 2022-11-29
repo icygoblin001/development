@@ -8,6 +8,7 @@ function App() {
   const [poemFilter, setPoemFilter] = useState(false);
   const [bookFilter, setBookFilter] = useState(false);
   const [shortFilter, setShortFilter] = useState(false);
+  const [longFilter, setLongFilter] = useState(false);
   const { poems } = data;
 
   // add poem to favorite items
@@ -103,6 +104,16 @@ function App() {
           >
             Short
           </button>
+          <button
+            style={{
+              background: longFilter ? "green" : "aliceblue",
+            }}
+            onClick={() => {
+              setLongFilter(!longFilter);
+            }}
+          >
+            Long
+          </button>
         </div>
         <div class="block col-2">
           <h3>Sort:</h3>
@@ -120,6 +131,7 @@ function App() {
           setPoemFilter={setPoemFilter}
           setBookFilter={setBookFilter}
           setShortFilter={setShortFilter}
+          setLongFilter={setLongFilter}
         />
         <Main
           favoriteItems={favoriteItems}
@@ -129,6 +141,7 @@ function App() {
           filterPoems={poemFilter}
           filterBooks={bookFilter}
           filterShort={shortFilter}
+          filterLong={longFilter}
         />
       </div>
     </div>

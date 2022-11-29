@@ -1,5 +1,11 @@
 export default function Favorites(props) {
-  const { favoriteItems, setPoemFilter, setBookFilter, setShortFilter } = props;
+  const {
+    favoriteItems,
+    setPoemFilter,
+    setBookFilter,
+    setShortFilter,
+    setLongFilter,
+  } = props;
   const itemsWords = favoriteItems.reduce((a, c) => a + c.qty * c.words, 0);
 
   return (
@@ -11,6 +17,7 @@ export default function Favorites(props) {
             setPoemFilter(false);
             setBookFilter(false);
             setShortFilter(false);
+            setLongFilter(false);
           }}
         >
           Reset Filters

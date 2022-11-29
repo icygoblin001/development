@@ -9,6 +9,7 @@ export default function Main(props) {
     filterPoems,
     filterBooks,
     filterShort,
+    filterLong,
   } = props;
   return (
     <div class="block col-2">
@@ -30,6 +31,11 @@ export default function Main(props) {
           }
           if (filterShort) {
             if (poem.words > 100) {
+              return;
+            }
+          }
+          if (filterLong) {
+            if (poem.words <= 100) {
               return;
             }
           }
