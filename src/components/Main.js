@@ -4,7 +4,7 @@ export default function Main(props) {
   const { favoriteItems, poems, onAdd, onRemove } = props;
   return (
     <div className="block col-2">
-      <h2>Poems</h2>
+      <h2 class="center">Poems</h2>
       <div className="row">
         {/* map each product to a div */}
         {poems.map((poem) => (

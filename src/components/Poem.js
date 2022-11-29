@@ -3,8 +3,13 @@ export default function Poem(props) {
   return (
     <div className="card">
       <img className="small" src={poem.image} alt={poem.name} />
-      <h3>{poem.name}</h3>
+      <div>
+        <u>
+          <a href={poem.link}>{poem.name}</a>
+        </u>
+      </div>
       <div>by {poem.author}</div>
+      <div>Genre: {poem.genre}</div>
       <div>{poem.words} Words</div>
       <div>
         {/* show minus or plus */}
@@ -19,7 +24,7 @@ export default function Poem(props) {
             </button>
           </div>
         ) : (
-          <button onClick={() => onAdd(poem)}>Add To Favorites</button>
+          <button onClick={() => onAdd(poem)}>Favorite</button>
         )}
       </div>
     </div>

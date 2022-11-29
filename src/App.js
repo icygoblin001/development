@@ -54,7 +54,11 @@ function App() {
           onRemove={onRemove}
           poems={poems}
         />
-        <Favorites />
+        <Favorites
+          favoriteItems={favoriteItems}
+          onAdd={onAdd}
+          onRemove={onRemove}
+        />
       </div>
     </div>
   );

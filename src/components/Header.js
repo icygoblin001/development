@@ -3,22 +3,13 @@ export default function Header(props) {
   return (
     <div className="row center block">
       <div>
-        <a href="#/">
-          <h2>Not GoodReads</h2>
-          <p>Browse and save your favorite poems</p>
-        </a>
-      </div>
-      <div>
-        <a href="#/cart">
-          Favorites
-          {/* if number of items is not zero, show a badge of how many there are */}
-          {countFavoriteItems ? (
-            <button className="badge">{countFavoriteItems}</button>
-          ) : (
-            ""
-          )}
-        </a>{" "}
-        <a href="#/signin">Sign In</a>
+        <h1 class="center">Poem Reader</h1>
+        <h3 class="center">
+          Browse through this curated selection of literary works and keep track
+          of how many words you've read.
+          <br></br>
+          Filter by author and genre, and sort by number of words.
+        </h3>
       </div>
     </div>
   );

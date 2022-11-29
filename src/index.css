@@ -1,5 +1,10 @@
 * {
   box-sizing: border-box;
+  /* background-color: aliceblue; */
+}
+
+.center {
+  text-align: center;
 }
 
 body {
@@ -52,9 +57,11 @@ button.remove {
 
 .card {
   background-color: white;
-  width: 20%;
+  border: 3px solid #9966cc;
+  width: 30%;
   padding: 1rem;
   margin: 0.5rem;
+  border-radius: 10px;
 }
 
 /* code {
@@ -77,10 +84,12 @@ button.remove {
 /* smaller screens are stacked */
 .col-1 {
   flex-basis: 100%;
+  border-radius: 10px;
 }
 
 .col-2 {
   flex-basis: 100%;
+  border-radius: 10px;
 }
 
 /* larger screens, put items next to each other, with col 2 taking up more space */
@@ -94,7 +103,12 @@ button.remove {
 }
 
 .block {
-  background-color: aliceblue;
+  /* background-color: grey; */
   padding: 1rem;
   margin: 0.5rem;
+  border-radius: 10px;
+}
+
+.text-right {
+  text-align: right;
 }
