@@ -11,7 +11,6 @@ export default function Main(props) {
     filterShort,
     filterLong,
     sort,
-    displayAll,
   } = props;
 
   const getPoems = (sort) => {
@@ -27,28 +26,28 @@ export default function Main(props) {
     }
 
     return poems.map((poem) => {
-      if (displayAll) {
-        return (
-          <Poem
-            key={poem.id}
-            poem={poem}
-            item={favoriteItems.find((x) => x.id === poem.id)}
-            onAdd={onAdd}
-            onRemove={onRemove}
-          ></Poem>
-        );
-      }
-      if (!filterPoems && !filterBooks && !filterShort && !filterLong) {
-        return (
-          <Poem
-            key={poem.id}
-            poem={poem}
-            item={favoriteItems.find((x) => x.id === poem.id)}
-            onAdd={onAdd}
-            onRemove={onRemove}
-          ></Poem>
-        );
-      }
+      // if (displayAll) {
+      //   return (
+      //     <Poem
+      //       key={poem.id}
+      //       poem={poem}
+      //       item={favoriteItems.find((x) => x.id === poem.id)}
+      //       onAdd={onAdd}
+      //       onRemove={onRemove}
+      //     ></Poem>
+      //   );
+      // }
+      // if (!filterPoems && !filterBooks && !filterShort && !filterLong) {
+      //   return (
+      //     <Poem
+      //       key={poem.id}
+      //       poem={poem}
+      //       item={favoriteItems.find((x) => x.id === poem.id)}
+      //       onAdd={onAdd}
+      //       onRemove={onRemove}
+      //     ></Poem>
+      //   );
+      // }
       if (filterPoems) {
         if (poem.genre == "poem") {
           return (

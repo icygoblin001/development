@@ -4,12 +4,12 @@ import Favorites from "./components/Favorites";
 import data from "./data";
 
 function App() {
-  const [displayAll, setDisplayAll] = useState(true);
+  // const [displayAll, setDisplayAll] = useState(true);
   const [favoriteItems, setFavoriteItems] = useState([]);
-  const [poemFilter, setPoemFilter] = useState(false);
-  const [bookFilter, setBookFilter] = useState(false);
-  const [shortFilter, setShortFilter] = useState(false);
-  const [longFilter, setLongFilter] = useState(false);
+  const [poemFilter, setPoemFilter] = useState(true);
+  const [bookFilter, setBookFilter] = useState(true);
+  const [shortFilter, setShortFilter] = useState(true);
+  const [longFilter, setLongFilter] = useState(true);
   const [sort, setSort] = useState("id");
   const { poems } = data;
 
@@ -82,54 +82,54 @@ function App() {
           <h3>Show (Filter By):</h3>
           <button
             style={{
-              background: poemFilter ? "green" : "aliceblue",
+              background: poemFilter ? "#AFE1AF" : "aliceblue",
             }}
             onClick={() => {
               setPoemFilter(!poemFilter);
-              setDisplayAll(false);
+              // setDisplayAll(false);
             }}
           >
-            Poem
+            Show Poems
           </button>
           <button
             style={{
-              background: bookFilter ? "green" : "aliceblue",
+              background: bookFilter ? "#AFE1AF" : "aliceblue",
             }}
             onClick={() => {
               setBookFilter(!bookFilter);
-              setDisplayAll(false);
+              // setDisplayAll(false);
             }}
           >
-            Books
+            Show Books
           </button>
           <button
             style={{
-              background: shortFilter ? "green" : "aliceblue",
+              background: shortFilter ? "#AFE1AF" : "aliceblue",
             }}
             onClick={() => {
               setShortFilter(!shortFilter);
-              setDisplayAll(false);
+              // setDisplayAll(false);
             }}
           >
-            &#8805; 100 words
+            Show &#8805; 100 words
           </button>
           <button
             style={{
-              background: longFilter ? "green" : "aliceblue",
+              background: longFilter ? "#AFE1AF" : "aliceblue",
             }}
             onClick={() => {
               setLongFilter(!longFilter);
-              setDisplayAll(false);
+              // setDisplayAll(false);
             }}
           >
-            &#60;100 words
+            Show &#60;100 words
           </button>
         </div>
         <div class="block col-2">
           <h3>Sort:</h3>
           <button
             style={{
-              background: sort === "words" ? "green" : "aliceblue",
+              background: sort === "words" ? "#AFE1AF" : "aliceblue",
             }}
             onClick={() => {
               if (sort === "words") {
@@ -146,11 +146,11 @@ function App() {
           <h3>Reset:</h3>
           <button
             onClick={() => {
-              setPoemFilter(false);
-              setBookFilter(false);
-              setShortFilter(false);
-              setLongFilter(false);
-              setDisplayAll(true);
+              setPoemFilter(true);
+              setBookFilter(true);
+              setShortFilter(true);
+              setLongFilter(true);
+              // setDisplayAll(true);
             }}
           >
             Display All
@@ -183,7 +183,7 @@ function App() {
           filterShort={shortFilter}
           filterLong={longFilter}
           sort={sort}
-          displayAll={displayAll}
+          // displayAll={displayAll}
         />
       </div>
     </div>
