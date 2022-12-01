@@ -6,12 +6,13 @@ https://icygoblin001.github.io/development/
 
 ### Goal and Value of the Application
 
-This application is used to browse through a selection of curated literary works. Users have the opportunity to favorite ones that catch their eye.
+This application is used to browse through a selection of curated literary works. Users have the opportunity to favorite ones that catch their eye. The ability to sort by word count is valuable to users who want to manage the length of text they want to engage in, and the combination of both poems and book excerpts encourages exploration into categorically differing yet contextually similar genres.
 
 ### Usability Principles Considered
 
 I avoided excessive colors and instead opted for bolded and underlined text to emphasize important details. There is a clear and consistent row system, which allows for top-down scanning.
 Buttons change color when they are active, and clickable links alter how the cursor looks.
+There is also padding around the body, to make viewing on larger screens easier.
 
 ### Organization of Components
 
