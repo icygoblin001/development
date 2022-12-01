@@ -17,8 +17,10 @@ Buttons change color when they are active, and clickable links alter how the cur
 
 Favorites:
 Displays favorited works and contains aggregator logic. Takes in list of favorited works as props.
+
 Main:
 Displays all works, handles filtering and sorting logic. Takes in list of favorited works, the poem data file, adding and removing functions, and all state variables for sorting and filtering.
+
 Poem:
 Represents each card, lays out information and enables favoriting. Takes in representation of favorited items, the poem data file, and adding and removing functions.
 
