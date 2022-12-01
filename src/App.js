@@ -133,10 +133,8 @@ function App() {
             Number of Words
           </button>
         </div>
-      </div>
-
-      <div class="row">
         <div class="block col-2">
+          <h3>Reset:</h3>
           <button
             onClick={() => {
               setPoemFilter(false);
@@ -145,7 +143,6 @@ function App() {
               setLongFilter(false);
               setSort("id");
             }}
-            class="reset"
           >
             Reset All
           </button>
