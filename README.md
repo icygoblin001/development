@@ -30,4 +30,4 @@ My data is stored in data.js, which I read into App. From here, it is passed una
 
 ### How the User Triggers State Changes
 
-Users trigger state changes by interacting with filters, sorts, and reset. For each filter and sort, I use a state variable to keep track of whether a particular data manipulation is active or not. The literary works I display in Main.js check for these state variables, and sort/hide items accordingly.
+Users trigger state changes by interacting with filters, sorts, and reset. For each filter and sort, I use a state variable to keep track of whether a particular data manipulation is active or not. The literary works I display in Main.js check for these state variables, and sort/display items accordingly.
