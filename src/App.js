@@ -4,6 +4,7 @@ import Favorites from "./components/Favorites";
 import data from "./data";
 
 function App() {
+  const [displayAll, setDisplayAll] = useState(true);
   const [favoriteItems, setFavoriteItems] = useState([]);
   const [poemFilter, setPoemFilter] = useState(false);
   const [bookFilter, setBookFilter] = useState(false);
@@ -55,14 +56,17 @@ function App() {
           </h1>
           <h3>
             Browse through this curated selection of literary works and keep
-            track of how many words you've read.
+            track of how many words are in your favorited list.
             <br />
             <br />
             Filter by genre and passage length; sort by number of words in
-            descending order.
+            descending order. i.e. Showing "Poem" and "&#60;100 words" will
+            display all poems AND all works with fewer than 100 words (including
+            book excerpts)
             <br />
             <br />
-            Click on poem title to view the literary work!
+            Clicking on poem title or image will redirect you to view the
+            literary work!
           </h3>
         </div>
         <div class="block col-1">
@@ -75,13 +79,14 @@ function App() {
 
       <div class="row">
         <div class="block col-2">
-          <h3>Filter:</h3>
+          <h3>Show (Filter By):</h3>
           <button
             style={{
               background: poemFilter ? "green" : "aliceblue",
             }}
             onClick={() => {
               setPoemFilter(!poemFilter);
+              setDisplayAll(false);
             }}
           >
             Poem
@@ -92,6 +97,7 @@ function App() {
             }}
             onClick={() => {
               setBookFilter(!bookFilter);
+              setDisplayAll(false);
             }}
           >
             Books
@@ -102,9 +108,10 @@ function App() {
             }}
             onClick={() => {
               setShortFilter(!shortFilter);
+              setDisplayAll(false);
             }}
           >
-            &#60; 100 words
+            &#8805; 100 words
           </button>
           <button
             style={{
@@ -112,9 +119,10 @@ function App() {
             }}
             onClick={() => {
               setLongFilter(!longFilter);
+              setDisplayAll(false);
             }}
           >
-            &#8805;100 words
+            &#60;100 words
           </button>
         </div>
         <div class="block col-2">
@@ -142,10 +150,17 @@ function App() {
               setBookFilter(false);
               setShortFilter(false);
               setLongFilter(false);
+              setDisplayAll(true);
+            }}
+          >
+            Remove All Filters
+          </button>
+          <button
+            onClick={() => {
               setSort("id");
             }}
           >
-            Clear Filters and Sort
+            Remove Sort
           </button>
         </div>
       </div>
@@ -168,6 +183,7 @@ function App() {
           filterShort={shortFilter}
           filterLong={longFilter}
           sort={sort}
+          displayAll={displayAll}
         />
       </div>
     </div>

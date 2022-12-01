@@ -11,6 +11,7 @@ export default function Main(props) {
     filterShort,
     filterLong,
     sort,
+    displayAll,
   } = props;
 
   const getPoems = (sort) => {
@@ -26,35 +27,78 @@ export default function Main(props) {
     }
 
     return poems.map((poem) => {
+      if (displayAll) {
+        return (
+          <Poem
+            key={poem.id}
+            poem={poem}
+            item={favoriteItems.find((x) => x.id === poem.id)}
+            onAdd={onAdd}
+            onRemove={onRemove}
+          ></Poem>
+        );
+      }
       if (filterPoems) {
-        if (poem.genre != "poem") {
-          return;
+        if (poem.genre == "poem") {
+          return (
+            <Poem
+              key={poem.id}
+              poem={poem}
+              item={favoriteItems.find((x) => x.id === poem.id)}
+              onAdd={onAdd}
+              onRemove={onRemove}
+            ></Poem>
+          );
         }
       }
       if (filterBooks) {
-        if (poem.genre != "book") {
-          return;
+        if (poem.genre == "book") {
+          return (
+            <Poem
+              key={poem.id}
+              poem={poem}
+              item={favoriteItems.find((x) => x.id === poem.id)}
+              onAdd={onAdd}
+              onRemove={onRemove}
+            ></Poem>
+          );
         }
       }
       if (filterShort) {
         if (poem.words > 100) {
-          return;
+          return (
+            <Poem
+              key={poem.id}
+              poem={poem}
+              item={favoriteItems.find((x) => x.id === poem.id)}
+              onAdd={onAdd}
+              onRemove={onRemove}
+            ></Poem>
+          );
         }
       }
       if (filterLong) {
         if (poem.words <= 100) {
-          return;
+          return (
+            <Poem
+              key={poem.id}
+              poem={poem}
+              item={favoriteItems.find((x) => x.id === poem.id)}
+              onAdd={onAdd}
+              onRemove={onRemove}
+            ></Poem>
+          );
         }
       }
-      return (
-        <Poem
-          key={poem.id}
-          poem={poem}
-          item={favoriteItems.find((x) => x.id === poem.id)}
-          onAdd={onAdd}
-          onRemove={onRemove}
-        ></Poem>
-      );
+      // return (
+      //   <Poem
+      //     key={poem.id}
+      //     poem={poem}
+      //     item={favoriteItems.find((x) => x.id === poem.id)}
+      //     onAdd={onAdd}
+      //     onRemove={onRemove}
+      //   ></Poem>
+      // );
     });
   };
 
