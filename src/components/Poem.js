@@ -3,21 +3,17 @@ export default function Poem(props) {
   const { item, poem, onAdd, onRemove } = props;
   return (
     <div class="card center">
-      <div class="fav">
+      <div>
         {/* show minus or plus */}
         {item ? (
           <div>
             <button onClick={() => onRemove(item)} class="update">
-              -
-            </button>
-            <span className="p-1">{item.qty}</span>
-            <button onClick={() => onAdd(item)} class="update">
-              +
+              Remove
             </button>
           </div>
         ) : (
           <button onClick={() => onAdd(poem)} class="noborder">
-            Favorite
+            <img src="/like.jpg" alt="image" class="fav" />
           </button>
         )}
       </div>

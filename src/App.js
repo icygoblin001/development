@@ -9,6 +9,7 @@ function App() {
   const [bookFilter, setBookFilter] = useState(false);
   const [shortFilter, setShortFilter] = useState(false);
   const [longFilter, setLongFilter] = useState(false);
+  const [sort, setSort] = useState("id");
   const { poems } = data;
 
   // add poem to favorite items
@@ -50,14 +51,14 @@ function App() {
       <div class="row">
         <div class="block col-2">
           <h1>
-            <u>Poems and Excerpts</u>
+            <u>Poems and Book Excerpts</u>
           </h1>
           <h3>
             Browse through this curated selection of literary works and keep
             track of how many words you've read.
             <br />
             <br />
-            Filter by author and genre, and sort by number of words.
+            Filter by genre and passage length; sort by number of words.
             <br />
             <br />
             Click on poem title to view the literary work!
@@ -102,7 +103,7 @@ function App() {
               setShortFilter(!shortFilter);
             }}
           >
-            Short
+            &#60; 100 words
           </button>
           <button
             style={{
@@ -112,12 +113,42 @@ function App() {
               setLongFilter(!longFilter);
             }}
           >
-            Long
+            &#8805;100 words
           </button>
         </div>
         <div class="block col-2">
           <h3>Sort:</h3>
-          <button>Number of Words</button>
+          <button
+            style={{
+              background: sort === "words" ? "green" : "aliceblue",
+            }}
+            onClick={() => {
+              if (sort === "words") {
+                setSort("id");
+              } else {
+                setSort("words");
+              }
+            }}
+          >
+            Number of Words
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="block col-2">
+          <button
+            onClick={() => {
+              setPoemFilter(false);
+              setBookFilter(false);
+              setShortFilter(false);
+              setLongFilter(false);
+              setSort("id");
+            }}
+            class="reset"
+          >
+            Reset All Filters
+          </button>
         </div>
       </div>
 
@@ -128,10 +159,6 @@ function App() {
           favoriteItems={favoriteItems}
           onAdd={onAdd}
           onRemove={onRemove}
-          setPoemFilter={setPoemFilter}
-          setBookFilter={setBookFilter}
-          setShortFilter={setShortFilter}
-          setLongFilter={setLongFilter}
         />
         <Main
           favoriteItems={favoriteItems}
@@ -142,6 +169,7 @@ function App() {
           filterBooks={bookFilter}
           filterShort={shortFilter}
           filterLong={longFilter}
+          sort={sort}
         />
       </div>
     </div>
