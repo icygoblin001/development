@@ -153,7 +153,7 @@ function App() {
               setDisplayAll(true);
             }}
           >
-            Remove All Filters
+            Display All
           </button>
           <button
             onClick={() => {
