@@ -62,7 +62,7 @@ function App() {
             Filter by genre and passage length; sort by number of words in
             descending order. i.e. Showing "Poem" and "&#60;100 words" will
             display all poems AND all works with fewer than 100 words (including
-            book excerpts)
+            book excerpts).
             <br />
             <br />
             Clicking on poem title or image will redirect you to view the
