@@ -58,7 +58,8 @@ function App() {
             track of how many words you've read.
             <br />
             <br />
-            Filter by genre and passage length; sort by number of words.
+            Filter by genre and passage length; sort by number of words in
+            descending order.
             <br />
             <br />
             Click on poem title to view the literary work!
@@ -130,7 +131,7 @@ function App() {
               }
             }}
           >
-            Number of Words
+            Number of Words (Descending)
           </button>
         </div>
         <div class="block col-2">
@@ -144,7 +145,7 @@ function App() {
               setSort("id");
             }}
           >
-            Reset All
+            Clear Filters and Sort
           </button>
         </div>
       </div>
