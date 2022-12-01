@@ -147,7 +147,7 @@ function App() {
             }}
             class="reset"
           >
-            Reset All Filters
+            Reset All
           </button>
         </div>
       </div>
