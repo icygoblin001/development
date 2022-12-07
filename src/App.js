@@ -49,11 +49,31 @@ function App() {
   };
   return (
     <div>
+      <h1>
+        <u>Poems and Book Excerpts</u>
+      </h1>
+
+      <h3>Project Introduction</h3>
+      <p>
+        <b>Context and Problem:</b> The goal of this assignment was to get some
+        practice with creating a web application using React.
+      </p>
+      <p>
+        <b>Research and Feedback:</b> I wanted to model my application after
+        popular literature websites, such as Goodreads. I derive a lot of value
+        from Goodreads, and feel as though its strength lies in its nicheness.
+        While the application I created displays my favorite works, the
+        implication is that this platform could be easily extended to accomodate
+        a more reputable poetry exploration website.
+      </p>
+      <p>
+        <b>Conclusion:</b> This project was my first experience with using
+        React. It was intimidating at first, but I know understand how efficient
+        it is in creating dynamic web applications.
+      </p>
+
       <div class="row">
         <div class="block col-2">
-          <h1>
-            <u>Poems and Book Excerpts</u>
-          </h1>
           <h3>
             Browse through this curated selection of literary works and keep
             track of how many words are in your favorited list.
@@ -76,7 +96,6 @@ function App() {
           ></img>
         </div>
       </div>
-
       <div class="row">
         <div class="block col-2">
           <h3>Show (Filter By):</h3>
@@ -164,7 +183,6 @@ function App() {
           </button>
         </div>
       </div>
-
       <div class="row">
         {/* we pass into Main component, becasue we need to interact
         with the poem component used within it */}
